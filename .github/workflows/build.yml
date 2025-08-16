@@ -36,7 +36,7 @@ jobs:
         run: |
           cd /d "%USERPROFILE%\Downloads" &&^
           curl ${{ matrix.compiler.url }} -L --output compiler &&^
-          7z.exe x compiler
+          7z.exe x compiler -o"${{ matrix.compiler.name }}"
           
       - name: curl b2
         shell: cmd
