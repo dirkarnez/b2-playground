@@ -84,14 +84,17 @@ jobs:
       #       -DCMAKE_INSTALL_PREFIX="cmake-build/${{ env.cmakeInstallationPath }}" -B./cmake-build &&^
       #       cd cmake-build && cmake --build . --config Release && cmake --install . 
             
-      - name: set PATH, check mingw version, cmake generate, build and install
-        if: ${{ matrix.compiler.url }}
+      - if: ${{ matrix.compiler.url }}
         shell: cmd
         run: |
           gcc --version &&^
-          .\setup.cmd &&^
-          .\local-build.cmd &&^
-          dir
+          .\setup.cmd
+
+      - if: ${{ matrix.compiler.url }}
+        shell: cmd
+        run: |
+          gcc --version &&^
+          .\local-build.cmd
 
       - name: Archive Release
         uses: thedoctor0/zip-release@master
