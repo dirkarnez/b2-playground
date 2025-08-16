@@ -1,8 +1,12 @@
 b2-playground
 =============
-- https://github.com/bfgroup/b2/releases/download/5.3.3/b2-5.3.3.zip
-- \bootstrap.bat
-- ./b2 install --prefix="b2-installation"
+1. https://github.com/bfgroup/b2/releases/download/5.3.3/b2-5.3.3.zip
+2. .\bootstrap.bat
+3. .\b2 install --prefix="b2-installation"
+
+### Documentation
+- [Building B2 | B2 User Manual](https://www.bfgroup.xyz/b2/manual/release/index.html#jam.building)
+- [Properties | B2 User Manual](https://www.bfgroup.xyz/b2/manual/release/index.html#b2.overview.invocation.properties)
 
 ### Tutorials
 - https://github.com/bfgroup/b2/tree/main/example/hello
